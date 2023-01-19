@@ -12,18 +12,32 @@
         <img src="images/logo.png" alt="logo de Alura">
     </header>
     <main>
-        <form action="">
-            <label>
-                <input type="text">
-            </label>
-            <button>Encriptar</button>
-            <button>Desencriptar</button>
-        </form>
-        <ul>
-            <li></li>
-            <img src="images/avatar.png" alt="">
-        </ul>
+        <div>
+            <form action="">
+                <textarea name="" id="user-input" cols="30" rows="10" placeholder="Ingrese el texto..."></textarea>
+                
+                <label>
+                    <img class="info-icon" src="images/info_icon.png" alt="Ícono de Información">
+                    Solo letras minúsculas y sin acentos
+                    <section>
+                        <input type="submit" value="Encriptar">
+                        <input type="submit" value="Desencriptar">
+                    </section>
+                </label>
+                
+            </form>
+        </div>
+
+        <div>
+            <form action="">
+                <textarea class="result" disabled  name="" id="" cols="30" rows="10">Esperando...</textarea>
+                <img class="avatar" src="images/avatar.png" alt="Avatar">
+            </form>
+        </div>
     </main>
-    <footer>by me</footer>
+    <footer>
+        <p>
+            by <a href="https://twitter.com/r4vc31">@r4vc31</a></footer>
+        </p>
 </body>
 </html>
