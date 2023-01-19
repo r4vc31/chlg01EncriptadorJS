@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,37 +8,40 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>Encriptador JS</title>
 </head>
+
 <body>
     <header>
-        <img src="images/logo.png" alt="logo de Alura">
+        <img id="logo" src="images/logo.png" alt="logo de Alura">
     </header>
     <main>
         <div>
             <form action="">
                 <textarea name="" id="user-input" cols="30" rows="10" placeholder="Ingrese el texto..."></textarea>
-                
-                <label>
-                    <img class="info-icon" src="images/info_icon.png" alt="Ícono de Información">
-                    Solo letras minúsculas y sin acentos
-                    <section>
-                        <input type="submit" value="Encriptar">
-                        <input type="submit" value="Desencriptar">
-                    </section>
-                </label>
-                
+
+                <img class="info-icon" src="images/info_icon.png" alt="Ícono de Información">
+                <p>Solo letras minúsculas y sin acentos</p>
+                <fieldset>
+                    <legend>¿listo?</legend>
+                    <input id="btn-encriptar" type="submit" value="Encriptar">
+                    <input id="btn-desencriptar" type="submit" value="Desencriptar">
+                </fieldset>
+
             </form>
         </div>
 
         <div>
             <form action="">
-                <textarea class="result" disabled  name="" id="" cols="30" rows="10">Esperando...</textarea>
+                <textarea class="result" disabled name="" id="" cols="30" rows="10" placeholder="Esperando..."></textarea>
                 <img class="avatar" src="images/avatar.png" alt="Avatar">
+                <button id="btn-result" type="submit">Copiar Resultado</button>
             </form>
         </div>
     </main>
     <footer>
         <p>
-            by <a href="https://twitter.com/r4vc31">@r4vc31</a></footer>
+            by <a target="_blank" href="https://twitter.com/r4vc31">@r4vc31</a>
         </p>
+    </footer>
 </body>
+
 </html>

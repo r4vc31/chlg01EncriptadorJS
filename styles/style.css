@@ -1,9 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    padding: 1rem;
+    height: 95vh;
+    padding: 0.5rem;
+    background-color: ;
 }
 
 header {
     text-align: left;
+    height: 5%;
+}
+
+#logo {
+    height: 100%;
 }
 
 main {
@@ -12,36 +23,15 @@ main {
     justify-content: center;
     gap: 1rem;
     align-items: center;
-}
-
-textarea {
-    display: block;
-    width: 100%;
-    margin-bottom: 1rem;
-}
-
-label input{
-    width: 50%;
-}
-
-footer {
-    text-align: right;
-}
-
-footer p {
-    display: inline;
-    border: 1px solid blue;
-    border-radius: 0.5rem;
-    padding: 0.25rem;
-    box-shadow: 0 0 1px 1px blue;
+    height: 90%;
 }
 
 div {
-    border: 1px solid black;
     padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 0 2px 1px black;
-    height: 75vh;
+    border: 1px solid black;
+    box-shadow: 0 0 5px 2px black;
+    width: 30vw;
+    height: 100%;
 }
 
 form {
@@ -49,15 +39,54 @@ form {
     height: 100%;
 }
 
-section {
-    padding: 0 auto;
+form p {
+    display: inline-block;
 }
 
-input {
-    margin: 0.25rem;
+.info-icon {
+    vertical-align: text-top;
 }
 
-#user-input {
-    height: 80%;
+textarea {
+    display: block;
+    width: 100%;
+    height: 70%;
 }
 
+fieldset input, #btn-result  {
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#btn-encriptar {
+    background: linear-gradient(90deg, lightblue, lightgreen);
+}
+
+#btn-desencriptar {
+    background: linear-gradient(90deg, lightpink, lightyellow);
+}
+
+.avatar {
+    height: 20vh;
+    display: block;
+    margin: auto;
+}
+
+#btn-result {
+    background: linear-gradient(grey, white);
+}
+
+footer {
+    text-align: right;
+    height: 5%;
+}
+
+footer p {
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid blue;
+    box-shadow: 0 0 2px 1px blue;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
