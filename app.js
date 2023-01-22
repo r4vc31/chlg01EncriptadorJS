@@ -1,3 +1,5 @@
+let alphabet = 'abcdefghijklmnopqrstuvwxyz ' //se incluye el espacio por practicidad
+
 const ENCRYPTION_KEYS = {
     e: "enter",
     i: "imes",
@@ -21,8 +23,6 @@ function encrypt(str){
     })
     return encrypted_word;
 }
-// Example
-console.log(encrypt("gato"));
 
 function decrypt(str){
     let decrypted_word = str;
@@ -42,10 +42,80 @@ function decrypt(str){
     
     return decrypted_word;
 }
-// Example
-console.log(decrypt("gaitober"));
 
-//Mensaje Secreto
-let before = "fenterlimescimesdaidenters poberr enternfrenterntair enterstenter dentersaifimesober y haibenterrlober cobernclufatimesdober cobern enterximestober!";
-let after = decrypt(before);
-console.log(after);
+window.addEventListener("load", function() {
+
+    let btn_encriptar = document.getElementById("btn-encriptar");
+    btn_encriptar.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        //Get User Input
+        let word = document.getElementById("user-input").value;
+        //Check conditions: only lowercase letters and no accents
+        if (word.length) {
+            let isValid = true;
+            for (let index = 0; index < word.split("").length; index++) {
+                const letter = word[index];
+                console.log(letter);
+                if (! alphabet.includes(letter)){
+                    isValid = false;
+                    break;
+                }
+            }
+            if (isValid) {
+                let result = encrypt(word);
+                let result_area = document.getElementById("operation-result");
+                result_area.disabled=false;
+                result_area.value = result;
+                result_area.disabled=true;
+            }else {
+                alert("Lo ingresado no es válido, siga las recomendaciones")
+            }
+
+        }else{
+            alert("Ingrese el texto a encriptar/desencriptar")
+        }
+    })
+
+    let btn_desencriptar = document.getElementById("btn-desencriptar");
+    btn_desencriptar.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        //Get User Input
+        let word = document.getElementById("user-input").value;
+        //Check conditions: only lowercase letters and no accents
+        if (word.length) {
+            let isValid = true;
+            for (let index = 0; index < word.split("").length; index++) {
+                const letter = word[index];
+                console.log(letter);
+                if (! alphabet.includes(letter)){
+                    isValid = false;
+                    break;
+                }
+            }
+            if (isValid) {
+                let result = decrypt(word);
+                let result_area = document.getElementById("operation-result");
+                result_area.disabled=false;
+                result_area.value = result;
+                result_area.disabled=true;
+            }else {
+                alert("Lo ingresado no es válido, siga las recomendaciones")
+            }
+
+        }else{
+            alert("Ingrese el texto a encriptar/desencriptar")
+        }
+    })
+
+    let btn_copiar = document.getElementById("btn-result");
+    btn_copiar.addEventListener("click", function(evt) {
+        evt.preventDefault();
+        let textoCopiado = document.getElementById('operation-result').value;
+        if (textoCopiado.length) {
+            navigator.clipboard.writeText(textoCopiado)
+        }else{
+            alert("Nada que copiar")
+        }
+    })
+
+});

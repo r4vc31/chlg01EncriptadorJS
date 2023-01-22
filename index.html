@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Encriptador JS</title>
+    <script src="app.js"></script>
 </head>
 
 <body>
@@ -15,11 +16,13 @@
     </header>
     <main>
         <div>
-            <form action="">
-                <textarea name="" id="user-input" cols="30" rows="10" placeholder="Ingrese el texto..."></textarea>
+            <form id="input">
+                <textarea name="" id="user-input" cols="30" rows="10" placeholder="Ingrese el texto..." required></textarea>
 
                 <img class="info-icon" src="images/info_icon.png" alt="Ícono de Información">
-                <p>Solo letras minúsculas y sin acentos</p>
+                <p style="margin-bottom: 0;">Solo letras minúsculas</p>
+                <p style="margin: 0; display: block;" >❌ acentos</p>
+                <p style="margin-top: 0;">❌ caracteres especiales</p>
                 <fieldset>
                     <legend>¿listo?</legend>
                     <input id="btn-encriptar" type="submit" value="Encriptar">
@@ -30,8 +33,8 @@
         </div>
 
         <div>
-            <form action="">
-                <textarea class="result" disabled name="" id="" cols="30" rows="10" placeholder="Esperando..."></textarea>
+            <form id="result" action="">
+                <textarea class="result" disabled name="" id="operation-result" cols="30" rows="10" placeholder="Esperando..."></textarea>
                 <img class="avatar" src="images/avatar.png" alt="Avatar">
                 <button id="btn-result" type="submit">Copiar Resultado</button>
             </form>

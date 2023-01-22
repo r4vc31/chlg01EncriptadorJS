@@ -51,12 +51,14 @@ textarea {
     display: block;
     width: 100%;
     height: 70%;
+    font-size: 2rem;
 }
 
 fieldset input, #btn-result  {
     font-size: 1rem;
     font-style: italic;
     font-weight: bold;
+    border-radius: 0.25rem;
 }
 
 #btn-encriptar {
@@ -75,6 +77,15 @@ fieldset input, #btn-result  {
 
 #btn-result {
     background: linear-gradient(grey, white);
+}
+
+#btn-encriptar, #btn-desencriptar, #btn-result {
+    transition: 1s all;
+    cursor: pointer;
+}
+
+#btn-encriptar:hover, #btn-desencriptar:hover, #btn-result:hover {
+    transform: scale(1.2) rotate(1deg);
 }
 
 footer {
